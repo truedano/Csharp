@@ -71,7 +71,7 @@
             this.textBox_show_http_data.Location = new System.Drawing.Point(15, 67);
             this.textBox_show_http_data.Multiline = true;
             this.textBox_show_http_data.Name = "textBox_show_http_data";
-            this.textBox_show_http_data.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBox_show_http_data.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_show_http_data.Size = new System.Drawing.Size(531, 447);
             this.textBox_show_http_data.TabIndex = 4;
             // 

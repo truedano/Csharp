@@ -36,24 +36,31 @@ namespace HttpAction
 
             if (comboBoxHttpType.Text == "get")
             {
-                textBox_show_http_data.Text = http.httpGet(text_ip);
-            }
-            else if (comboBoxHttpType.Text == "post")
-            {
-                string status = http.httpPostGetStatus(text_ip, post_parms);
-                if(status == "200 OK")
+                string status = http.httpGetGetStatus(text_ip);
+                label_http_status.Text = status;
+                if (status == "200 OK")
                 {
-                    var post_result = http.httpPost(text_ip, post_parms);
-
-                    textBox_show_http_data.Text = post_result;
-
+                    textBox_show_http_data.Text = http.httpGet(text_ip);
                     label_http_status.BackColor = Color.Yellow;
                 }
                 else
                 {
                     label_http_status.BackColor = Color.IndianRed;
                 }
+            }
+            else if (comboBoxHttpType.Text == "post")
+            {
+                string status = http.httpPostGetStatus(text_ip, post_parms);
                 label_http_status.Text = status;
+                if (status == "200 OK")
+                {
+                    textBox_show_http_data.Text = http.httpPost(text_ip, post_parms);
+                    label_http_status.BackColor = Color.Yellow;
+                }
+                else
+                {
+                    label_http_status.BackColor = Color.IndianRed;
+                }
             }
         }
 

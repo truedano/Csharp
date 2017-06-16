@@ -10,6 +10,32 @@ namespace HttpAction
 {
     class Http
     {
+        public string httpGetGetStatus(string url)
+        {
+            HttpWebResponse response = null;
+
+            try
+            {
+                WebRequest request = WebRequest.Create(url);
+
+                response = (HttpWebResponse)request.GetResponse();
+
+                HttpStatusCode statuscode = ((HttpWebResponse)response).StatusCode;
+                string status = ((HttpWebResponse)response).StatusDescription;
+                string ret = (int)statuscode + " " + status;
+
+                return ret;
+            }
+            catch(WebException we)
+            {
+                response = (HttpWebResponse)we.Response;
+                HttpStatusCode statuscode = ((HttpWebResponse)response).StatusCode;
+                string status = ((HttpWebResponse)response).StatusDescription;
+                string ret = (int)statuscode + " " + status;
+                return ret;
+            }
+        }
+
         public string httpGet(String url)
         {
             try

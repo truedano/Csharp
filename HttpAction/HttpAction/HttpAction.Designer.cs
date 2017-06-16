@@ -67,6 +67,7 @@
             // 
             // textBox_show_http_data
             // 
+            this.textBox_show_http_data.BackColor = System.Drawing.SystemColors.Info;
             this.textBox_show_http_data.Location = new System.Drawing.Point(15, 67);
             this.textBox_show_http_data.Multiline = true;
             this.textBox_show_http_data.Name = "textBox_show_http_data";

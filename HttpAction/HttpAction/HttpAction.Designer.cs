@@ -109,9 +109,10 @@
             // label_http_status
             // 
             this.label_http_status.AutoSize = true;
+            this.label_http_status.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label_http_status.Location = new System.Drawing.Point(122, 41);
             this.label_http_status.Name = "label_http_status";
-            this.label_http_status.Size = new System.Drawing.Size(64, 12);
+            this.label_http_status.Size = new System.Drawing.Size(82, 15);
             this.label_http_status.TabIndex = 8;
             this.label_http_status.Text = "Http Status : ";
             // 
